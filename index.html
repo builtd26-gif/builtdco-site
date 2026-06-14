@@ -1,159 +1,166 @@
-export default function Home() {
-  const products = [
-    { name: "Built Hoodie V1", price: "¥8,500" },
-    { name: "Built Tee Core", price: "¥4,200" },
-    { name: "Oversized Black Fit", price: "¥6,800" },
-  ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BuiltDCO</title>
 
-  const categories = ["Hoodies", "T-Shirts", "Oversized", "Essentials"];
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-  return (
-    <main className="bg-black text-white">
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
-        <div className="flex justify-between items-center px-6 py-4">
-          <div className="font-bold tracking-widest">BUILTDCO</div>
+<body class="bg-black text-white">
 
-          <nav className="hidden md:flex gap-8 text-sm text-gray-300">
-            <a href="#">Shop</a>
-            <a href="#">Drops</a>
-            <a href="#">Story</a>
-            <a href="#">Lookbook</a>
-          </nav>
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+  <div class="flex justify-between items-center px-6 py-4">
+    <div class="font-bold tracking-widest">BUILTDCO</div>
 
-          <div className="flex gap-4 text-sm">
-            <button>Search</button>
-            <button>Cart (0)</button>
-          </div>
-        </div>
-      </header>
+    <nav class="hidden md:flex gap-8 text-sm text-gray-300">
+      <a href="#">Shop</a>
+      <a href="#">Drops</a>
+      <a href="#">Story</a>
+      <a href="#">Lookbook</a>
+    </nav>
 
-      {/* HERO */}
-      <section className="h-screen flex items-center justify-center text-center bg-gradient-to-b from-black to-zinc-900 px-6">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold">
-            Built Different. Worn with purpose.
-          </h1>
+    <div class="flex gap-4 text-sm">
+      <button>Search</button>
+      <button>Cart (0)</button>
+    </div>
+  </div>
+</header>
 
-          <p className="mt-4 text-gray-400">
-            BuiltDCO is identity expressed through clothing — discipline, growth, and self-definition.
-          </p>
+<!-- HERO -->
+<section class="h-screen flex items-center justify-center text-center bg-gradient-to-b from-black to-zinc-900 px-6">
+  <div class="max-w-2xl">
+    <h1 class="text-4xl md:text-6xl font-bold">
+      Built Different. Worn with purpose.
+    </h1>
 
-          <div className="mt-8 flex justify-center gap-4">
-            <button className="bg-white text-black px-6 py-2 rounded-full">
-              Shop Latest Drop
-            </button>
-            <button className="border border-white px-6 py-2 rounded-full">
-              Explore Story
-            </button>
-          </div>
-        </div>
-      </section>
+    <p class="mt-4 text-gray-400">
+      BuiltDCO is identity expressed through clothing — discipline, growth, and self-definition.
+    </p>
 
-      {/* LATEST DROP */}
-      <section className="px-6 py-20">
-        <h2 className="text-2xl font-bold mb-8">Latest Drop</h2>
+    <div class="mt-8 flex justify-center gap-4">
+      <button class="bg-white text-black px-6 py-2 rounded-full">
+        Shop Latest Drop
+      </button>
+      <button class="border border-white px-6 py-2 rounded-full">
+        Explore Story
+      </button>
+    </div>
+  </div>
+</section>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {products.map((p) => (
-            <div key={p.name} className="border border-white/10 p-4 rounded-xl">
-              <div className="h-60 bg-zinc-800 mb-4" />
-              <h3 className="font-semibold">{p.name}</h3>
-              <p className="text-gray-400">{p.price}</p>
-              <button className="mt-4 w-full bg-white text-black py-2 rounded">
-                Add to Cart
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
+<!-- PRODUCTS -->
+<section class="px-6 py-20">
+  <h2 class="text-2xl font-bold mb-8">Latest Drop</h2>
 
-      {/* BRAND STORY */}
-      <section className="px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-3xl font-bold">What BuiltDCO means</h2>
-          <p className="mt-4 text-gray-400">
-            BuiltDCO represents discipline, identity, and growth through struggle.
-          </p>
+  <div class="grid md:grid-cols-3 gap-6">
 
-          <ul className="mt-6 space-y-2 text-gray-300">
-            <li>• Built, not given</li>
-            <li>• Discipline over comfort</li>
-            <li>• Identity through action</li>
-          </ul>
-        </div>
+    <div class="border border-white/10 p-4 rounded-xl">
+      <div class="h-60 bg-zinc-800 mb-4"></div>
+      <h3>Built Hoodie V1</h3>
+      <p class="text-gray-400">¥8,500</p>
+      <button class="mt-4 w-full bg-white text-black py-2 rounded">
+        Add to Cart
+      </button>
+    </div>
 
-        <div className="h-96 bg-zinc-800 rounded-xl" />
-      </section>
+    <div class="border border-white/10 p-4 rounded-xl">
+      <div class="h-60 bg-zinc-800 mb-4"></div>
+      <h3>Built Tee Core</h3>
+      <p class="text-gray-400">¥4,200</p>
+      <button class="mt-4 w-full bg-white text-black py-2 rounded">
+        Add to Cart
+      </button>
+    </div>
 
-      {/* LOOKBOOK */}
-      <section className="px-6 py-20">
-        <h2 className="text-2xl font-bold mb-8">Lookbook</h2>
+    <div class="border border-white/10 p-4 rounded-xl">
+      <div class="h-60 bg-zinc-800 mb-4"></div>
+      <h3>Oversized Black Fit</h3>
+      <p class="text-gray-400">¥6,800</p>
+      <button class="mt-4 w-full bg-white text-black py-2 rounded">
+        Add to Cart
+      </button>
+    </div>
 
-        <div className="flex gap-4 overflow-x-auto">
-          {[1, 2, 3, 4].map((i) => (
-            <div
-              key={i}
-              className="min-w-[300px] h-[400px] bg-zinc-800 rounded-xl"
-            />
-          ))}
-        </div>
-      </section>
+  </div>
+</section>
 
-      {/* CATEGORIES */}
-      <section className="px-6 py-20">
-        <h2 className="text-2xl font-bold mb-8">Shop Categories</h2>
+<!-- STORY -->
+<section class="px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+  <div>
+    <h2 class="text-3xl font-bold">What BuiltDCO means</h2>
 
-        <div className="grid md:grid-cols-4 gap-4">
-          {categories.map((c) => (
-            <div
-              key={c}
-              className="h-40 flex items-center justify-center bg-zinc-900 border border-white/10 rounded-xl"
-            >
-              {c}
-            </div>
-          ))}
-        </div>
-      </section>
+    <p class="mt-4 text-gray-400">
+      BuiltDCO represents discipline, identity, and growth through struggle.
+    </p>
 
-      {/* DROP CULTURE */}
-      <section className="px-6 py-20 text-center bg-zinc-950">
-        <h2 className="text-3xl font-bold">Limited Drops Only</h2>
-        <p className="text-gray-400 mt-4">
-          No mass production. Every release is intentional.
-        </p>
+    <ul class="mt-6 space-y-2 text-gray-300">
+      <li>• Built, not given</li>
+      <li>• Discipline over comfort</li>
+      <li>• Identity through action</li>
+    </ul>
+  </div>
 
-        <button className="mt-6 bg-white text-black px-6 py-2 rounded-full">
-          Get Drop Alerts
-        </button>
-      </section>
+  <div class="h-96 bg-zinc-800 rounded-xl"></div>
+</section>
 
-      {/* NEWSLETTER */}
-      <section className="px-6 py-20 text-center">
-        <h2 className="text-2xl font-bold">Stay ahead of every drop</h2>
+<!-- LOOKBOOK -->
+<section class="px-6 py-20">
+  <h2 class="text-2xl font-bold mb-8">Lookbook</h2>
 
-        <div className="mt-6 flex justify-center">
-          <input
-            placeholder="Enter email"
-            className="px-4 py-2 bg-black border border-white/20 rounded-l"
-          />
-          <button className="bg-white text-black px-6 py-2 rounded-r">
-            Join
-          </button>
-        </div>
-      </section>
+  <div class="flex gap-4 overflow-x-auto">
+    <div class="min-w-[300px] h-[400px] bg-zinc-800 rounded-xl"></div>
+    <div class="min-w-[300px] h-[400px] bg-zinc-800 rounded-xl"></div>
+    <div class="min-w-[300px] h-[400px] bg-zinc-800 rounded-xl"></div>
+  </div>
+</section>
 
-      {/* FOOTER */}
-      <footer className="px-6 py-10 border-t border-white/10 text-gray-400 text-sm">
-        <div className="flex justify-between">
-          <p>© {new Date().getFullYear()} BuiltDCO</p>
+<!-- CATEGORIES -->
+<section class="px-6 py-20">
+  <h2 class="text-2xl font-bold mb-8">Categories</h2>
 
-          <div className="flex gap-4">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-          </div>
-        </div>
-      </footer>
-    </main>
-  );
-}
+  <div class="grid md:grid-cols-4 gap-4">
+    <div class="h-40 flex items-center justify-center bg-zinc-900 border border-white/10 rounded-xl">Hoodies</div>
+    <div class="h-40 flex items-center justify-center bg-zinc-900 border border-white/10 rounded-xl">T-Shirts</div>
+    <div class="h-40 flex items-center justify-center bg-zinc-900 border border-white/10 rounded-xl">Oversized</div>
+    <div class="h-40 flex items-center justify-center bg-zinc-900 border border-white/10 rounded-xl">Essentials</div>
+  </div>
+</section>
+
+<!-- DROP CULTURE -->
+<section class="px-6 py-20 text-center bg-zinc-950">
+  <h2 class="text-3xl font-bold">Limited Drops Only</h2>
+  <p class="text-gray-400 mt-4">
+    No mass production. Every release is intentional.
+  </p>
+
+  <button class="mt-6 bg-white text-black px-6 py-2 rounded-full">
+    Get Drop Alerts
+  </button>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="px-6 py-20 text-center">
+  <h2 class="text-2xl font-bold">Stay ahead of every drop</h2>
+
+  <div class="mt-6 flex justify-center">
+    <input class="px-4 py-2 bg-black border border-white/20 rounded-l" placeholder="Enter email"/>
+    <button class="bg-white text-black px-6 py-2 rounded-r">Join</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="px-6 py-10 border-t border-white/10 text-gray-400 text-sm">
+  <div class="flex justify-between">
+    <p>© BuiltDCO</p>
+    <div class="flex gap-4">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
